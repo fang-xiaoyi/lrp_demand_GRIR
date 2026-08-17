@@ -1,0 +1,53 @@
+cattle_type,outcome,design,event_name,window_months,weighting,term,coefficient,std_error,p_value,nobs,status
+feeder,head_share,local_reform_window,pm19_coverage_dependent,6,unweighted,post_delta_10pp,,,,,"not_estimated: in feols(formula, data = data, weights = weights, cl...: 
+The only variable, 'post_delta_10pp', is collinear with the fixed effects. Without doubt, your model is misspecified."
+feeder,endorsement_share,local_reform_window,pm19_coverage_dependent,6,unweighted,post_delta_10pp,,,,,"not_estimated: in feols(formula, data = data, weights = weights, cl...: 
+The only variable, 'post_delta_10pp', is collinear with the fixed effects. Without doubt, your model is misspecified."
+feeder,insured_head,local_reform_window,pm19_coverage_dependent,6,unweighted,post_delta_10pp,,,,,"not_estimated: argument ""env"" is missing, with no default"
+feeder,endorsements,local_reform_window,pm19_coverage_dependent,6,unweighted,post_delta_10pp,,,,,"not_estimated: argument ""env"" is missing, with no default"
+feeder,head_share,local_reform_window,pm19_coverage_dependent,12,unweighted,post_delta_10pp,0.0203443119126181,0.0166470811131733,0.224434413985104,2160,estimated
+feeder,endorsement_share,local_reform_window,pm19_coverage_dependent,12,unweighted,post_delta_10pp,0.0170695838392437,0.0163103413096921,0.297733529862839,2160,estimated
+feeder,insured_head,local_reform_window,pm19_coverage_dependent,12,unweighted,post_delta_10pp,4.05597699401787,1.70065152772612,0.0170812207278396,438,estimated
+feeder,endorsements,local_reform_window,pm19_coverage_dependent,12,unweighted,post_delta_10pp,1.29098179345915,0.995456908483075,0.194674678353148,438,estimated
+feeder,head_share,local_reform_window,pm20_coverage_expansion,6,unweighted,post_delta_10pp,,,,,"not_estimated: in feols(formula, data = data, weights = weights, cl...: 
+The only variable, 'post_delta_10pp', is collinear with the fixed effects. Without doubt, your model is misspecified."
+feeder,endorsement_share,local_reform_window,pm20_coverage_expansion,6,unweighted,post_delta_10pp,,,,,"not_estimated: in feols(formula, data = data, weights = weights, cl...: 
+The only variable, 'post_delta_10pp', is collinear with the fixed effects. Without doubt, your model is misspecified."
+feeder,insured_head,local_reform_window,pm20_coverage_expansion,6,unweighted,post_delta_10pp,,,,,"not_estimated: argument ""env"" is missing, with no default"
+feeder,endorsements,local_reform_window,pm20_coverage_expansion,6,unweighted,post_delta_10pp,,,,,"not_estimated: argument ""env"" is missing, with no default"
+feeder,head_share,local_reform_window,pm20_coverage_expansion,12,unweighted,post_delta_10pp,-4.10802069545647e-16,2.53310463610447e-16,0.10581541257168,8655,estimated
+feeder,endorsement_share,local_reform_window,pm20_coverage_expansion,12,unweighted,post_delta_10pp,-4.08378458515879e-16,2.59139103603469e-16,0.116005972152967,8655,estimated
+feeder,insured_head,local_reform_window,pm20_coverage_expansion,12,unweighted,post_delta_10pp,,,,,"not_estimated: argument ""env"" is missing, with no default"
+feeder,endorsements,local_reform_window,pm20_coverage_expansion,12,unweighted,post_delta_10pp,,,,,"not_estimated: argument ""env"" is missing, with no default"
+fed,head_share,local_reform_window,pm19_coverage_dependent,6,unweighted,post_delta_10pp,,,,,"not_estimated: in feols(formula, data = data, weights = weights, cl...: 
+The only variable, 'post_delta_10pp', is collinear with the fixed effects. Without doubt, your model is misspecified."
+fed,endorsement_share,local_reform_window,pm19_coverage_dependent,6,unweighted,post_delta_10pp,,,,,"not_estimated: in feols(formula, data = data, weights = weights, cl...: 
+The only variable, 'post_delta_10pp', is collinear with the fixed effects. Without doubt, your model is misspecified."
+fed,insured_head,local_reform_window,pm19_coverage_dependent,6,unweighted,post_delta_10pp,,,,,"not_estimated: argument ""env"" is missing, with no default"
+fed,endorsements,local_reform_window,pm19_coverage_dependent,6,unweighted,post_delta_10pp,,,,,"not_estimated: argument ""env"" is missing, with no default"
+fed,head_share,local_reform_window,pm19_coverage_dependent,12,unweighted,post_delta_10pp,-8.22871182957469e-17,1.57509100062578e-16,0.637497808715094,50,estimated
+fed,endorsement_share,local_reform_window,pm19_coverage_dependent,12,unweighted,post_delta_10pp,-8.22871182957469e-17,1.57509100062578e-16,0.637497808715094,50,estimated
+fed,insured_head,local_reform_window,pm19_coverage_dependent,12,unweighted,post_delta_10pp,,,,,"not_estimated: argument ""env"" is missing, with no default"
+fed,endorsements,local_reform_window,pm19_coverage_dependent,12,unweighted,post_delta_10pp,,,,,"not_estimated: argument ""env"" is missing, with no default"
+fed,head_share,local_reform_window,pm20_coverage_expansion,6,unweighted,post_delta_10pp,,,,,"not_estimated: in feols(formula, data = data, weights = weights, cl...: 
+The only variable, 'post_delta_10pp', is collinear with the fixed effects. Without doubt, your model is misspecified."
+fed,endorsement_share,local_reform_window,pm20_coverage_expansion,6,unweighted,post_delta_10pp,,,,,"not_estimated: in feols(formula, data = data, weights = weights, cl...: 
+The only variable, 'post_delta_10pp', is collinear with the fixed effects. Without doubt, your model is misspecified."
+fed,insured_head,local_reform_window,pm20_coverage_expansion,6,unweighted,post_delta_10pp,,,,,"not_estimated: argument ""env"" is missing, with no default"
+fed,endorsements,local_reform_window,pm20_coverage_expansion,6,unweighted,post_delta_10pp,,,,,"not_estimated: argument ""env"" is missing, with no default"
+fed,head_share,local_reform_window,pm20_coverage_expansion,12,unweighted,post_delta_10pp,4.68586533438522e-16,3.36720052493483e-15,0.889721696818015,1280,estimated
+fed,endorsement_share,local_reform_window,pm20_coverage_expansion,12,unweighted,post_delta_10pp,5.81693627716786e-16,2.99843334959699e-15,0.846738399541121,1280,estimated
+fed,insured_head,local_reform_window,pm20_coverage_expansion,12,unweighted,post_delta_10pp,,,,,"not_estimated: argument ""env"" is missing, with no default"
+fed,endorsements,local_reform_window,pm20_coverage_expansion,12,unweighted,post_delta_10pp,,,,,"not_estimated: argument ""env"" is missing, with no default"
+feeder,head_share,stacked_two_reforms,pm19_plus_pm20,12,unweighted,post_delta_10pp,0.0159648384965626,0.0128662655179654,0.21552432274033,10815,estimated
+feeder,endorsement_share,stacked_two_reforms,pm19_plus_pm20,12,unweighted,post_delta_10pp,0.0133950536330519,0.0126159625639729,0.289100785596064,10815,estimated
+feeder,insured_head,stacked_two_reforms,pm19_plus_pm20,12,unweighted,post_delta_10pp,4.05597705021504,1.64245398503834,0.0135316539829155,2325,estimated
+feeder,endorsements,stacked_two_reforms,pm19_plus_pm20,12,unweighted,post_delta_10pp,1.29098179345887,0.961362831203593,0.179315255090348,2325,estimated
+fed,head_share,stacked_two_reforms,pm19_plus_pm20,12,unweighted,post_delta_10pp,1.7111797111479e-16,1.53685441419984e-15,0.911663008589457,1330,estimated
+fed,endorsement_share,stacked_two_reforms,pm19_plus_pm20,12,unweighted,post_delta_10pp,2.38769262020637e-16,1.43297040207315e-15,0.868145186738129,1330,estimated
+fed,insured_head,stacked_two_reforms,pm19_plus_pm20,12,unweighted,post_delta_10pp,,,,,"not_estimated: argument ""env"" is missing, with no default"
+fed,endorsements,stacked_two_reforms,pm19_plus_pm20,12,unweighted,post_delta_10pp,,,,,"not_estimated: argument ""env"" is missing, with no default"
+feeder,insured_head,predetermined_exposure_scale,full_schedule,,unweighted,pred_head_exposure_10pp,-0.455923304992635,0.313842140621612,0.146302794567877,2024,estimated
+feeder,endorsements,predetermined_exposure_scale,full_schedule,,unweighted,pred_endorsement_exposure_10pp,-0.168493737506417,0.228223277554484,0.460341505848345,2024,estimated
+fed,insured_head,predetermined_exposure_scale,full_schedule,,unweighted,pred_head_exposure_10pp,3.79464155507957,2.60387589082986,0.145032186067562,73,estimated
+fed,endorsements,predetermined_exposure_scale,full_schedule,,unweighted,pred_endorsement_exposure_10pp,1.12068014751605,0.353957916692492,0.00154476682326747,73,estimated

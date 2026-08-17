@@ -1,0 +1,9 @@
+cattle_type,outcome,weighting,term,coefficient,std_error,p_value,nobs,counties,event_reference_month
+feeder,head_share,equal_county_month,post_delta_10pp,0.0439654787739873,0.0206650096132566,0.035067646108085,3935,179,-1
+feeder,head_share,volume_weighted,post_delta_10pp,0.0608885424221681,0.0341273898379866,0.0764898492106557,3935,179,-1
+feeder,endorsement_share,equal_county_month,post_delta_10pp,0.0432476895093969,0.020258310068606,0.0344574210024442,3935,179,-1
+feeder,endorsement_share,volume_weighted,post_delta_10pp,0.0338291630005731,0.0152255484481062,0.0278414781617424,3935,179,-1
+fed,head_share,equal_county_month,post_delta_10pp,0.00432074104274709,0.011073487841242,0.709873310102993,145,15,-2
+fed,head_share,volume_weighted,post_delta_10pp,9.88502134173473e-05,0.00314920009677833,0.975977411037882,145,15,-2
+fed,endorsement_share,equal_county_month,post_delta_10pp,0.0125343582033733,0.0169251177386176,0.486908591039665,145,15,-2
+fed,endorsement_share,volume_weighted,post_delta_10pp,-0.00278800993643816,0.00963730548581497,0.782092751638985,145,15,-2

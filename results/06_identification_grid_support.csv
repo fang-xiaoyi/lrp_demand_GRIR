@@ -1,0 +1,13 @@
+cattle_type,design,event_name,window_months,observations,counties,county_months,zero_head_share,zero_endorsement_share
+feeder,local_reform_window,pm19_coverage_dependent,6,1000,99,200,0.785,0.785
+feeder,local_reform_window,pm19_coverage_dependent,12,2305,134,461,0.788286334056399,0.788286334056399
+feeder,local_reform_window,pm20_coverage_expansion,6,2890,254,578,0.780276816608997,0.780276816608997
+feeder,local_reform_window,pm20_coverage_expansion,12,8840,368,1768,0.780995475113122,0.780995475113122
+fed,local_reform_window,pm19_coverage_dependent,6,55,6,11,0.8,0.8
+fed,local_reform_window,pm19_coverage_dependent,12,100,11,20,0.8,0.8
+fed,local_reform_window,pm20_coverage_expansion,6,510,60,102,0.782352941176471,0.782352941176471
+fed,local_reform_window,pm20_coverage_expansion,12,1385,92,277,0.787725631768953,0.787725631768953
+feeder,stacked_two_reforms,pm19_plus_pm20,12,11145,374,2229,0.782503364737551,0.782503364737551
+fed,stacked_two_reforms,pm19_plus_pm20,12,1485,95,297,0.788552188552189,0.788552188552189
+feeder,predetermined_exposure_scale,full_schedule,,2026,165,2026,0,0
+fed,predetermined_exposure_scale,full_schedule,,86,12,86,0,0

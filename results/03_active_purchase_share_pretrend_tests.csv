@@ -1,0 +1,9 @@
+cattle_type,outcome,weighting,reference_month,pre_months_tested,chi_square,degrees_freedom,p_value
+feeder,head_share,equal_county_month,-1,23,225.945034708762,23,2.8793074670914e-35
+feeder,head_share,volume_weighted,-1,23,123.165154407724,23,1.11770063834669e-15
+feeder,endorsement_share,equal_county_month,-1,23,275.039204177709,23,4.86983368665088e-45
+feeder,endorsement_share,volume_weighted,-1,23,125.534656757814,23,4.15988606290077e-16
+fed,head_share,equal_county_month,-2,11,414.95214215684,5,1.77516638667078e-87
+fed,head_share,volume_weighted,-2,11,14062.0308817303,5,0
+fed,endorsement_share,equal_county_month,-2,11,171.823995183868,5,2.97781966330323e-35
+fed,endorsement_share,volume_weighted,-2,11,16742.1385388346,5,0

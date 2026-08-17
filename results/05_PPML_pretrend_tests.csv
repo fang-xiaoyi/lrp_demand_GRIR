@@ -1,0 +1,5 @@
+cattle_type,outcome,setup,counties,event_reference_month,pre_months_tested,chi_square,degrees_freedom,p_value,status
+feeder,insured_head,event_advisor_base,179,-1,23,171.082049584485,22,4.62635907233967e-25,estimated
+feeder,endorsements,event_advisor_base,179,-1,23,205.529405826161,22,9.3864569878132e-32,estimated
+fed,insured_head,event_advisor_base,15,-2,5,120.179426228811,1,5.7790002674274e-28,estimated
+fed,endorsements,event_advisor_base,15,-2,2,487.13940711591,1,5.9737662587337e-108,estimated

@@ -1,0 +1,25 @@
+cattle_type,outcome,weighting,setup,counties,term,coefficient,std_error,p_value,nobs,status
+feeder,head_share,equal_county_month,seasonal_fe,179,post_delta_10pp,0.0121509091245116,0.0121553167993885,0.319151302747469,3935,estimated
+feeder,head_share,equal_county_month,seasonal_fe_linear_tier_trend,179,post_delta_10pp,0.0666337179346737,0.0249664808339552,0.00847667217347605,3935,estimated
+feeder,head_share,volume_weighted,seasonal_fe,179,post_delta_10pp,0.0325769846127175,0.0217794387164629,0.136887496253654,3935,estimated
+feeder,head_share,volume_weighted,seasonal_fe_linear_tier_trend,179,post_delta_10pp,0.061974993790576,0.0331331429465393,0.0634323684547796,3935,estimated
+feeder,endorsement_share,equal_county_month,seasonal_fe,179,post_delta_10pp,0.0106645689619675,0.0117803997458575,0.366818430699438,3935,estimated
+feeder,endorsement_share,equal_county_month,seasonal_fe_linear_tier_trend,179,post_delta_10pp,0.0655307050217485,0.0243034251340811,0.00784017080406043,3935,estimated
+feeder,endorsement_share,volume_weighted,seasonal_fe,179,post_delta_10pp,0.00986606993458792,0.00922906319394185,0.286836249612259,3935,estimated
+feeder,endorsement_share,volume_weighted,seasonal_fe_linear_tier_trend,179,post_delta_10pp,0.0509949129013967,0.0195453270923524,0.0100307728197806,3935,estimated
+fed,head_share,equal_county_month,seasonal_fe,15,post_delta_10pp,-0.0380354103792071,0.0433570843677964,0.414087690767395,130,estimated
+fed,head_share,equal_county_month,seasonal_fe_linear_tier_trend,15,post_delta_10pp,0.0145188672495348,0.0194020642353648,0.482560683202766,130,estimated
+fed,head_share,volume_weighted,seasonal_fe,15,post_delta_10pp,-0.0163437214140334,0.0219575568358461,0.484795368438568,130,estimated
+fed,head_share,volume_weighted,seasonal_fe_linear_tier_trend,15,post_delta_10pp,0.00443514783824457,0.0129356334404504,0.743394667474393,130,estimated
+fed,endorsement_share,equal_county_month,seasonal_fe,15,post_delta_10pp,-0.0319619081244556,0.0347589958947964,0.393285164995632,130,estimated
+fed,endorsement_share,equal_county_month,seasonal_fe_linear_tier_trend,15,post_delta_10pp,0.0309553472232252,0.0554317623301018,0.596751314153184,130,estimated
+fed,endorsement_share,volume_weighted,seasonal_fe,15,post_delta_10pp,-0.05104480099539,0.032558295304145,0.167974539089429,130,estimated
+fed,endorsement_share,volume_weighted,seasonal_fe_linear_tier_trend,15,post_delta_10pp,0.0323038834038096,0.0490574531113397,0.534659389225202,130,estimated
+feeder,head_share,equal_county_month,year_over_year_change,52,reform_delta_10pp,-0.00494831631997739,0.0508246731619001,0.92328356308985,430,estimated
+feeder,head_share,volume_weighted,year_over_year_change,52,reform_delta_10pp,-0.00536175795849797,0.0343063344389506,0.877167690262643,430,estimated
+feeder,endorsement_share,equal_county_month,year_over_year_change,52,reform_delta_10pp,-0.000708097567189684,0.048430496418284,0.988460712626032,430,estimated
+feeder,endorsement_share,volume_weighted,year_over_year_change,52,reform_delta_10pp,-0.00234888390471476,0.0323619761068402,0.942766573229605,430,estimated
+fed,head_share,equal_county_month,year_over_year_change,2,reform_delta_10pp,,,,,not_identified: fed overlap sample is all fixed-effect singletons
+fed,head_share,volume_weighted,year_over_year_change,2,reform_delta_10pp,,,,,not_identified: fed overlap sample is all fixed-effect singletons
+fed,endorsement_share,equal_county_month,year_over_year_change,2,reform_delta_10pp,,,,,not_identified: fed overlap sample is all fixed-effect singletons
+fed,endorsement_share,volume_weighted,year_over_year_change,2,reform_delta_10pp,,,,,not_identified: fed overlap sample is all fixed-effect singletons

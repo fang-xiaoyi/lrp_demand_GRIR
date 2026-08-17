@@ -1,0 +1,573 @@
+Statutory-tier pilot started: 2026-08-17 11:26:52 
+
+===== R/01_validate_statutory_rates.R =====
+Validating endorsement-level statutory subsidy rates...
+Saved validation results. Overall 1pp match share: 97.54% 
+
+===== R/02_build_county_month_tier_panel.R =====
+Building county-month-fixed-tier panel...
+Saved panel: 164305 rows.
+
+===== R/03_run_active_purchase_share_models.R =====
+Running active-purchase county-month tier-share models...
+G3;NOTE: 0/165 fixed-effect singletons were removed (165 observations).
+gG3;NOTE: 0/165 fixed-effect singletons were removed (165 observations).
+gG3;The variable 'coverage_bin::b90_94:linear_month' has been removed because of collinearity (see
+$collin.var).
+gG3;NOTE: 0/165 fixed-effect singletons were removed (165 observations).
+gG3;NOTE: 0/165 fixed-effect singletons were removed (165 observations).
+gG3;The variable 'coverage_bin::b90_94:linear_month' has been removed because of collinearity (see
+$collin.var).
+gG3;NOTE: 0/165 fixed-effect singletons were removed (165 observations).
+gG3;NOTE: 0/165 fixed-effect singletons were removed (165 observations).
+gG3;The variable 'coverage_bin::b90_94:linear_month' has been removed because of collinearity (see
+$collin.var).
+gG3;NOTE: 0/165 fixed-effect singletons were removed (165 observations).
+gG3;NOTE: 0/165 fixed-effect singletons were removed (165 observations).
+gG3;NOTE: 0/40 fixed-effect singletons were removed (40 observations).
+gG3;NOTE: 0/40 fixed-effect singletons were removed (40 observations).
+gG3;The variable 'coverage_bin::b90_94:linear_month' has been removed because of collinearity (see
+$collin.var).
+gG3;NOTE: 0/40 fixed-effect singletons were removed (40 observations).
+gG3;NOTE: 0/40 fixed-effect singletons were removed (40 observations).
+gG3;The variable 'coverage_bin::b90_94:linear_month' has been removed because of collinearity (see
+$collin.var).
+gG3;NOTE: 0/40 fixed-effect singletons were removed (40 observations).
+gG3;NOTE: 0/40 fixed-effect singletons were removed (40 observations).
+gG3;The variable 'coverage_bin::b90_94:linear_month' has been removed because of collinearity (see
+$collin.var).
+gG3;NOTE: 0/40 fixed-effect singletons were removed (40 observations).
+gG3;NOTE: 0/40 fixed-effect singletons were removed (40 observations).
+gG3;The variable 'coverage_bin::b90_94:linear_month' has been removed because of collinearity (see
+$collin.var).
+g   cattle_type county_months counties share_one_positive_head_tier share_two_plus_positive_head_tiers share_one_positive_endorsement_tier
+        <char>         <int>    <int>                        <num>                              <num>                               <num>
+1:         fed            37       15                    0.9189189                         0.08108108                           0.9189189
+2:      feeder           820      179                    0.9243902                         0.07560976                           0.9243902
+   share_two_plus_positive_endorsement_tiers
+                                       <num>
+1:                                0.08108108
+2:                                0.07560976
+   cattle_type           outcome          weighting            term   coefficient   std_error    p_value  nobs counties event_reference_month
+        <char>            <char>             <char>          <char>         <num>       <num>      <num> <int>    <int>                 <int>
+1:      feeder        head_share equal_county_month post_delta_10pp  4.396548e-02 0.020665010 0.03506765  3935      179                    -1
+2:      feeder        head_share    volume_weighted post_delta_10pp  6.088854e-02 0.034127390 0.07648985  3935      179                    -1
+3:      feeder endorsement_share equal_county_month post_delta_10pp  4.324769e-02 0.020258310 0.03445742  3935      179                    -1
+4:      feeder endorsement_share    volume_weighted post_delta_10pp  3.382916e-02 0.015225548 0.02784148  3935      179                    -1
+5:         fed        head_share equal_county_month post_delta_10pp  4.320741e-03 0.011073488 0.70987331   145       15                    -2
+6:         fed        head_share    volume_weighted post_delta_10pp  9.885021e-05 0.003149200 0.97597741   145       15                    -2
+7:         fed endorsement_share equal_county_month post_delta_10pp  1.253436e-02 0.016925118 0.48690859   145       15                    -2
+8:         fed endorsement_share    volume_weighted post_delta_10pp -2.788010e-03 0.009637305 0.78209275   145       15                    -2
+   cattle_type           outcome          weighting reference_month pre_months_tested chi_square degrees_freedom      p_value
+        <char>            <char>             <char>           <int>             <int>      <num>           <int>        <num>
+1:      feeder        head_share equal_county_month              -1                23   225.9450              23 2.879307e-35
+2:      feeder        head_share    volume_weighted              -1                23   123.1652              23 1.117701e-15
+3:      feeder endorsement_share equal_county_month              -1                23   275.0392              23 4.869834e-45
+4:      feeder endorsement_share    volume_weighted              -1                23   125.5347              23 4.159886e-16
+5:         fed        head_share equal_county_month              -2                11   414.9521               5 1.775166e-87
+6:         fed        head_share    volume_weighted              -2                11 14062.0309               5 0.000000e+00
+7:         fed endorsement_share equal_county_month              -2                11   171.8240               5 2.977820e-35
+8:         fed endorsement_share    volume_weighted              -2                11 16742.1385               5 0.000000e+00
+Saved active-purchase tier-share results.
+
+===== R/04_setups.R =====
+Comparing tier-choice setups (tables only)...
+G3;NOTE: 0/165/0 fixed-effect singletons were removed (165 observations).
+gG3;NOTE: 0/165/0 fixed-effect singletons were removed (165 observations).
+gG3;NOTE: 0/165/0 fixed-effect singletons were removed (165 observations).
+gG3;NOTE: 0/165/0 fixed-effect singletons were removed (165 observations).
+gG3;NOTE: 0/165/0 fixed-effect singletons were removed (165 observations).
+gG3;NOTE: 0/165/0 fixed-effect singletons were removed (165 observations).
+gG3;NOTE: 0/165/0 fixed-effect singletons were removed (165 observations).
+gG3;NOTE: 0/165/0 fixed-effect singletons were removed (165 observations).
+gG3;NOTE: 0/40/20 fixed-effect singletons were removed (55 observations).
+gG3;NOTE: 0/40/20 fixed-effect singletons were removed (55 observations).
+gG3;NOTE: 0/40/20 fixed-effect singletons were removed (55 observations).
+gG3;NOTE: 0/40/20 fixed-effect singletons were removed (55 observations).
+gG3;NOTE: 0/40/20 fixed-effect singletons were removed (55 observations).
+gG3;NOTE: 0/40/20 fixed-effect singletons were removed (55 observations).
+gG3;NOTE: 0/40/20 fixed-effect singletons were removed (55 observations).
+gG3;NOTE: 0/40/20 fixed-effect singletons were removed (55 observations).
+gG3;NOTE: 0/140/0 fixed-effect singletons were removed (140 observations).
+gG3;NOTE: 0/140/0 fixed-effect singletons were removed (140 observations).
+gG3;NOTE: 0/140/0 fixed-effect singletons were removed (140 observations).
+gG3;NOTE: 0/140/0 fixed-effect singletons were removed (140 observations).
+g   cattle_type                 setup observations county_months counties
+        <char>                <char>        <int>         <int>    <int>
+1:         fed           level_share          185            37       15
+2:      feeder           level_share         4100           820      179
+3:      feeder year_over_year_change          570           114       52
+4:         fed year_over_year_change           15             3        2
+    cattle_type           outcome          weighting                         setup counties              term   coefficient   std_error     p_value  nobs
+         <char>            <char>             <char>                        <char>    <int>            <char>         <num>       <num>       <num> <int>
+ 1:      feeder        head_share equal_county_month                   seasonal_fe      179   post_delta_10pp  0.0121509091 0.012155317 0.319151303  3935
+ 2:      feeder        head_share equal_county_month seasonal_fe_linear_tier_trend      179   post_delta_10pp  0.0666337179 0.024966481 0.008476672  3935
+ 3:      feeder        head_share    volume_weighted                   seasonal_fe      179   post_delta_10pp  0.0325769846 0.021779439 0.136887496  3935
+ 4:      feeder        head_share    volume_weighted seasonal_fe_linear_tier_trend      179   post_delta_10pp  0.0619749938 0.033133143 0.063432368  3935
+ 5:      feeder endorsement_share equal_county_month                   seasonal_fe      179   post_delta_10pp  0.0106645690 0.011780400 0.366818431  3935
+ 6:      feeder endorsement_share equal_county_month seasonal_fe_linear_tier_trend      179   post_delta_10pp  0.0655307050 0.024303425 0.007840171  3935
+ 7:      feeder endorsement_share    volume_weighted                   seasonal_fe      179   post_delta_10pp  0.0098660699 0.009229063 0.286836250  3935
+ 8:      feeder endorsement_share    volume_weighted seasonal_fe_linear_tier_trend      179   post_delta_10pp  0.0509949129 0.019545327 0.010030773  3935
+ 9:         fed        head_share equal_county_month                   seasonal_fe       15   post_delta_10pp -0.0380354104 0.043357084 0.414087691   130
+10:         fed        head_share equal_county_month seasonal_fe_linear_tier_trend       15   post_delta_10pp  0.0145188672 0.019402064 0.482560683   130
+11:         fed        head_share    volume_weighted                   seasonal_fe       15   post_delta_10pp -0.0163437214 0.021957557 0.484795368   130
+12:         fed        head_share    volume_weighted seasonal_fe_linear_tier_trend       15   post_delta_10pp  0.0044351478 0.012935633 0.743394667   130
+13:         fed endorsement_share equal_county_month                   seasonal_fe       15   post_delta_10pp -0.0319619081 0.034758996 0.393285165   130
+14:         fed endorsement_share equal_county_month seasonal_fe_linear_tier_trend       15   post_delta_10pp  0.0309553472 0.055431762 0.596751314   130
+15:         fed endorsement_share    volume_weighted                   seasonal_fe       15   post_delta_10pp -0.0510448010 0.032558295 0.167974539   130
+16:         fed endorsement_share    volume_weighted seasonal_fe_linear_tier_trend       15   post_delta_10pp  0.0323038834 0.049057453 0.534659389   130
+17:      feeder        head_share equal_county_month         year_over_year_change       52 reform_delta_10pp -0.0049483163 0.050824673 0.923283563   430
+18:      feeder        head_share    volume_weighted         year_over_year_change       52 reform_delta_10pp -0.0053617580 0.034306334 0.877167690   430
+19:      feeder endorsement_share equal_county_month         year_over_year_change       52 reform_delta_10pp -0.0007080976 0.048430496 0.988460713   430
+20:      feeder endorsement_share    volume_weighted         year_over_year_change       52 reform_delta_10pp -0.0023488839 0.032361976 0.942766573   430
+21:         fed        head_share equal_county_month         year_over_year_change        2 reform_delta_10pp            NA          NA          NA    NA
+22:         fed        head_share    volume_weighted         year_over_year_change        2 reform_delta_10pp            NA          NA          NA    NA
+23:         fed endorsement_share equal_county_month         year_over_year_change        2 reform_delta_10pp            NA          NA          NA    NA
+24:         fed endorsement_share    volume_weighted         year_over_year_change        2 reform_delta_10pp            NA          NA          NA    NA
+    cattle_type           outcome          weighting                         setup counties              term   coefficient   std_error     p_value  nobs
+                                                               status
+                                                               <char>
+ 1:                                                         estimated
+ 2:                                                         estimated
+ 3:                                                         estimated
+ 4:                                                         estimated
+ 5:                                                         estimated
+ 6:                                                         estimated
+ 7:                                                         estimated
+ 8:                                                         estimated
+ 9:                                                         estimated
+10:                                                         estimated
+11:                                                         estimated
+12:                                                         estimated
+13:                                                         estimated
+14:                                                         estimated
+15:                                                         estimated
+16:                                                         estimated
+17:                                                         estimated
+18:                                                         estimated
+19:                                                         estimated
+20:                                                         estimated
+21: not_identified: fed overlap sample is all fixed-effect singletons
+22: not_identified: fed overlap sample is all fixed-effect singletons
+23: not_identified: fed overlap sample is all fixed-effect singletons
+24: not_identified: fed overlap sample is all fixed-effect singletons
+                                                               status
+Saved setup comparison; no figures generated.
+
+===== R/05_PPML_count_models.R =====
+Running PPML county-month-tier count models...
+G3;NOTE: 276/637 fixed-effects (2,927 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 277/638/23 fixed-effects (2,951 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 276/637 fixed-effects (2,927 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 276/637 fixed-effects (2,927 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 277/638/23 fixed-effects (2,951 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 276/637 fixed-effects (2,927 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 20/65 fixed-effects (161 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 20/66/45 fixed-effects (173 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 20/65 fixed-effects (161 observations) removed because of only 0 outcomes or singletons.
+gG3;The variable 'event_month::4:delta_rate_10pp' has been removed because of collinearity (see
+$collin.var).
+gG3;NOTE: 20/65 fixed-effects (161 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 20/66/45 fixed-effects (173 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 20/65 fixed-effects (161 observations) removed because of only 0 outcomes or singletons.
+gG3;The variables 'event_month::-20:delta_rate_10pp', 'event_month::-17:delta_rate_10pp',
+'event_month::-10:delta_rate_10pp', 'event_month::3:delta_rate_10pp' and
+'event_month::4:delta_rate_10pp' have been removed because of collinearity (see $collin.var).
+g   cattle_type observations county_months counties zero_head_share zero_endorsement_share total_head total_endorsements
+        <char>        <int>         <int>    <int>           <num>                  <num>      <int>              <int>
+1:         fed          185            37       15       0.7837838              0.7837838       3937                 58
+2:      feeder         4100           820      179       0.7846341              0.7846341     160246               1803
+   cattle_type      outcome            setup counties              term coefficient    std_error       p_value  nobs    status
+        <char>       <char>           <char>    <int>            <char>       <num>        <num>         <num> <int>    <char>
+1:      feeder insured_head     advisor_base      179 subsidy_rate_10pp   2.5865368 1.467993e+00  7.807693e-02  1173 estimated
+2:      feeder insured_head tier_seasonality      179 subsidy_rate_10pp   2.4237969 1.029145e+00  1.851489e-02  1149 estimated
+3:      feeder endorsements     advisor_base      179 subsidy_rate_10pp   0.6113021 5.283303e-01  2.472539e-01  1173 estimated
+4:      feeder endorsements tier_seasonality      179 subsidy_rate_10pp   0.9258316 5.746250e-01  1.071377e-01  1149 estimated
+5:         fed insured_head     advisor_base       15 subsidy_rate_10pp -36.9162657 7.033091e-15  0.000000e+00    24 estimated
+6:         fed insured_head tier_seasonality       15 subsidy_rate_10pp -37.2847128 5.216795e+00  8.865993e-13    12 estimated
+7:         fed endorsements     advisor_base       15 subsidy_rate_10pp -36.4525776 7.552246e-15  0.000000e+00    24 estimated
+8:         fed endorsements tier_seasonality       15 subsidy_rate_10pp -37.2836028 1.679490e+00 3.483389e-109    12 estimated
+   cattle_type      outcome              setup counties event_reference_month pre_months_tested chi_square degrees_freedom       p_value    status
+        <char>       <char>             <char>    <int>                 <int>             <int>      <num>           <int>         <num>    <char>
+1:      feeder insured_head event_advisor_base      179                    -1                23   171.0820              22  4.626359e-25 estimated
+2:      feeder endorsements event_advisor_base      179                    -1                23   205.5294              22  9.386457e-32 estimated
+3:         fed insured_head event_advisor_base       15                    -2                 5   120.1794               1  5.779000e-28 estimated
+4:         fed endorsements event_advisor_base       15                    -2                 2   487.1394               1 5.973766e-108 estimated
+Saved PPML count results.
+
+===== R/06_identification_grid.R =====
+Running predefined identification grid...
+G3;NOTE: 0/240/0 fixed-effect singletons were removed (240 observations).
+gG3;NOTE: 0/240/0 fixed-effect singletons were removed (240 observations).
+gG3;NOTE: 132/445/46 fixed-effects (964 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 132/445/46 fixed-effects (964 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 0/145/0 fixed-effect singletons were removed (145 observations).
+gG3;NOTE: 0/145/0 fixed-effect singletons were removed (145 observations).
+gG3;NOTE: 234/511/23 fixed-effects (1,867 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 234/511/23 fixed-effects (1,867 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 0/575/0 fixed-effect singletons were removed (575 observations).
+gG3;NOTE: 0/575/0 fixed-effect singletons were removed (575 observations).
+gG3;NOTE: 297/1,086/28 fixed-effects (2,527 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 297/1,086/28 fixed-effects (2,527 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 0/185/0 fixed-effect singletons were removed (185 observations).
+gG3;NOTE: 0/185/0 fixed-effect singletons were removed (185 observations).
+gG3;NOTE: 895/1,346/24 fixed-effects (6,953 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 895/1,346/24 fixed-effects (6,953 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 0/20/25 fixed-effect singletons were removed (35 observations).
+gG3;NOTE: 0/20/25 fixed-effect singletons were removed (35 observations).
+gG3;NOTE: 0/35/20 fixed-effect singletons were removed (50 observations).
+gG3;NOTE: 0/35/20 fixed-effect singletons were removed (50 observations).
+gG3;NOTE: 0/175/0 fixed-effect singletons were removed (175 observations).
+gG3;NOTE: 0/175/0 fixed-effect singletons were removed (175 observations).
+gG3;NOTE: 63/278/26 fixed-effects (502 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 63/278/26 fixed-effects (502 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 0/105/0 fixed-effect singletons were removed (105 observations).
+gG3;NOTE: 0/105/0 fixed-effect singletons were removed (105 observations).
+gG3;NOTE: 169/368/33 fixed-effects (1,204 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 169/368/33 fixed-effects (1,204 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 0/330/0 fixed-effect singletons were removed (330 observations).
+gG3;NOTE: 0/330/0 fixed-effect singletons were removed (330 observations).
+gG3;The variables 'event_month::0:delta_rate_10pp', 'event_month::1:delta_rate_10pp',
+'event_month::2:delta_rate_10pp', 'event_month::3:delta_rate_10pp',
+'event_month::4:delta_rate_10pp', 'event_month::5:delta_rate_10pp' and 5 others have been removed
+because of collinearity (see $collin.var).
+gG3;NOTE: 0/330/0 fixed-effect singletons were removed (330 observations).
+gG3;NOTE: 0/330/0 fixed-effect singletons were removed (330 observations).
+gG3;The variables 'event_month::0:delta_rate_10pp', 'event_month::1:delta_rate_10pp',
+'event_month::2:delta_rate_10pp', 'event_month::3:delta_rate_10pp',
+'event_month::4:delta_rate_10pp', 'event_month::5:delta_rate_10pp' and 5 others have been removed
+because of collinearity (see $collin.var).
+gG3;NOTE: 1,129/1,857/47 fixed-effects (8,820 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 1,129/1,857/47 fixed-effects (8,820 observations) removed because of only 0 outcomes or singletons.
+gG3;The variables 'event_month::-6:delta_rate_10pp', 'event_month::0:delta_rate_10pp',
+'event_month::1:delta_rate_10pp', 'event_month::2:delta_rate_10pp',
+'event_month::3:delta_rate_10pp', 'event_month::4:delta_rate_10pp' and 6 others have been removed
+because of collinearity (see $collin.var).
+gG3;NOTE: 1,129/1,857/47 fixed-effects (8,820 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 1,129/1,857/47 fixed-effects (8,820 observations) removed because of only 0 outcomes or singletons.
+gG3;The variables 'event_month::-6:delta_rate_10pp', 'event_month::0:delta_rate_10pp',
+'event_month::1:delta_rate_10pp', 'event_month::2:delta_rate_10pp',
+'event_month::3:delta_rate_10pp', 'event_month::4:delta_rate_10pp' and 6 others have been removed
+because of collinearity (see $collin.var).
+gG3;NOTE: 0/140/20 fixed-effect singletons were removed (155 observations).
+gG3;NOTE: 0/140/20 fixed-effect singletons were removed (155 observations).
+gG3;NOTE: 179/419/73 fixed-effects (1,304 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 179/419/73 fixed-effects (1,304 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 2/0 fixed-effects (2 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 2/0 fixed-effects (2 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 2/13 fixed-effects (13 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 2/13 fixed-effects (13 observations) removed because of only 0 outcomes or singletons.
+g    cattle_type                       design              event_name window_months observations counties county_months zero_head_share zero_endorsement_share
+         <char>                       <char>                  <char>         <int>        <int>    <int>         <int>           <num>                  <num>
+ 1:      feeder          local_reform_window pm19_coverage_dependent             6         1000       99           200       0.7850000              0.7850000
+ 2:      feeder          local_reform_window pm19_coverage_dependent            12         2305      134           461       0.7882863              0.7882863
+ 3:      feeder          local_reform_window pm20_coverage_expansion             6         2890      254           578       0.7802768              0.7802768
+ 4:      feeder          local_reform_window pm20_coverage_expansion            12         8840      368          1768       0.7809955              0.7809955
+ 5:         fed          local_reform_window pm19_coverage_dependent             6           55        6            11       0.8000000              0.8000000
+ 6:         fed          local_reform_window pm19_coverage_dependent            12          100       11            20       0.8000000              0.8000000
+ 7:         fed          local_reform_window pm20_coverage_expansion             6          510       60           102       0.7823529              0.7823529
+ 8:         fed          local_reform_window pm20_coverage_expansion            12         1385       92           277       0.7877256              0.7877256
+ 9:      feeder          stacked_two_reforms          pm19_plus_pm20            12        11145      374          2229       0.7825034              0.7825034
+10:         fed          stacked_two_reforms          pm19_plus_pm20            12         1485       95           297       0.7885522              0.7885522
+11:      feeder predetermined_exposure_scale           full_schedule            NA         2026      165          2026       0.0000000              0.0000000
+12:         fed predetermined_exposure_scale           full_schedule            NA           86       12            86       0.0000000              0.0000000
+    cattle_type           outcome                       design              event_name window_months  weighting                           term   coefficient
+         <char>            <char>                       <char>                  <char>         <int>     <char>                         <char>         <num>
+ 1:      feeder        head_share          local_reform_window pm19_coverage_dependent             6 unweighted                post_delta_10pp            NA
+ 2:      feeder endorsement_share          local_reform_window pm19_coverage_dependent             6 unweighted                post_delta_10pp            NA
+ 3:      feeder      insured_head          local_reform_window pm19_coverage_dependent             6 unweighted                post_delta_10pp            NA
+ 4:      feeder      endorsements          local_reform_window pm19_coverage_dependent             6 unweighted                post_delta_10pp            NA
+ 5:      feeder        head_share          local_reform_window pm19_coverage_dependent            12 unweighted                post_delta_10pp  2.034431e-02
+ 6:      feeder endorsement_share          local_reform_window pm19_coverage_dependent            12 unweighted                post_delta_10pp  1.706958e-02
+ 7:      feeder      insured_head          local_reform_window pm19_coverage_dependent            12 unweighted                post_delta_10pp  4.055977e+00
+ 8:      feeder      endorsements          local_reform_window pm19_coverage_dependent            12 unweighted                post_delta_10pp  1.290982e+00
+ 9:      feeder        head_share          local_reform_window pm20_coverage_expansion             6 unweighted                post_delta_10pp            NA
+10:      feeder endorsement_share          local_reform_window pm20_coverage_expansion             6 unweighted                post_delta_10pp            NA
+11:      feeder      insured_head          local_reform_window pm20_coverage_expansion             6 unweighted                post_delta_10pp            NA
+12:      feeder      endorsements          local_reform_window pm20_coverage_expansion             6 unweighted                post_delta_10pp            NA
+13:      feeder        head_share          local_reform_window pm20_coverage_expansion            12 unweighted                post_delta_10pp -4.108021e-16
+14:      feeder endorsement_share          local_reform_window pm20_coverage_expansion            12 unweighted                post_delta_10pp -4.083785e-16
+15:      feeder      insured_head          local_reform_window pm20_coverage_expansion            12 unweighted                post_delta_10pp            NA
+16:      feeder      endorsements          local_reform_window pm20_coverage_expansion            12 unweighted                post_delta_10pp            NA
+17:         fed        head_share          local_reform_window pm19_coverage_dependent             6 unweighted                post_delta_10pp            NA
+18:         fed endorsement_share          local_reform_window pm19_coverage_dependent             6 unweighted                post_delta_10pp            NA
+19:         fed      insured_head          local_reform_window pm19_coverage_dependent             6 unweighted                post_delta_10pp            NA
+20:         fed      endorsements          local_reform_window pm19_coverage_dependent             6 unweighted                post_delta_10pp            NA
+21:         fed        head_share          local_reform_window pm19_coverage_dependent            12 unweighted                post_delta_10pp -8.228712e-17
+22:         fed endorsement_share          local_reform_window pm19_coverage_dependent            12 unweighted                post_delta_10pp -8.228712e-17
+23:         fed      insured_head          local_reform_window pm19_coverage_dependent            12 unweighted                post_delta_10pp            NA
+24:         fed      endorsements          local_reform_window pm19_coverage_dependent            12 unweighted                post_delta_10pp            NA
+25:         fed        head_share          local_reform_window pm20_coverage_expansion             6 unweighted                post_delta_10pp            NA
+26:         fed endorsement_share          local_reform_window pm20_coverage_expansion             6 unweighted                post_delta_10pp            NA
+27:         fed      insured_head          local_reform_window pm20_coverage_expansion             6 unweighted                post_delta_10pp            NA
+28:         fed      endorsements          local_reform_window pm20_coverage_expansion             6 unweighted                post_delta_10pp            NA
+29:         fed        head_share          local_reform_window pm20_coverage_expansion            12 unweighted                post_delta_10pp  4.685865e-16
+30:         fed endorsement_share          local_reform_window pm20_coverage_expansion            12 unweighted                post_delta_10pp  5.816936e-16
+31:         fed      insured_head          local_reform_window pm20_coverage_expansion            12 unweighted                post_delta_10pp            NA
+32:         fed      endorsements          local_reform_window pm20_coverage_expansion            12 unweighted                post_delta_10pp            NA
+33:      feeder        head_share          stacked_two_reforms          pm19_plus_pm20            12 unweighted                post_delta_10pp  1.596484e-02
+34:      feeder endorsement_share          stacked_two_reforms          pm19_plus_pm20            12 unweighted                post_delta_10pp  1.339505e-02
+35:      feeder      insured_head          stacked_two_reforms          pm19_plus_pm20            12 unweighted                post_delta_10pp  4.055977e+00
+36:      feeder      endorsements          stacked_two_reforms          pm19_plus_pm20            12 unweighted                post_delta_10pp  1.290982e+00
+37:         fed        head_share          stacked_two_reforms          pm19_plus_pm20            12 unweighted                post_delta_10pp  1.711180e-16
+38:         fed endorsement_share          stacked_two_reforms          pm19_plus_pm20            12 unweighted                post_delta_10pp  2.387693e-16
+39:         fed      insured_head          stacked_two_reforms          pm19_plus_pm20            12 unweighted                post_delta_10pp            NA
+40:         fed      endorsements          stacked_two_reforms          pm19_plus_pm20            12 unweighted                post_delta_10pp            NA
+41:      feeder      insured_head predetermined_exposure_scale           full_schedule            NA unweighted        pred_head_exposure_10pp -4.559233e-01
+42:      feeder      endorsements predetermined_exposure_scale           full_schedule            NA unweighted pred_endorsement_exposure_10pp -1.684937e-01
+43:         fed      insured_head predetermined_exposure_scale           full_schedule            NA unweighted        pred_head_exposure_10pp  3.794642e+00
+44:         fed      endorsements predetermined_exposure_scale           full_schedule            NA unweighted pred_endorsement_exposure_10pp  1.120680e+00
+    cattle_type           outcome                       design              event_name window_months  weighting                           term   coefficient
+       std_error     p_value  nobs
+           <num>       <num> <int>
+ 1:           NA          NA    NA
+ 2:           NA          NA    NA
+ 3:           NA          NA    NA
+ 4:           NA          NA    NA
+ 5: 1.664708e-02 0.224434414  2160
+ 6: 1.631034e-02 0.297733530  2160
+ 7: 1.700652e+00 0.017081221   438
+ 8: 9.954569e-01 0.194674678   438
+ 9:           NA          NA    NA
+10:           NA          NA    NA
+11:           NA          NA    NA
+12:           NA          NA    NA
+13: 2.533105e-16 0.105815413  8655
+14: 2.591391e-16 0.116005972  8655
+15:           NA          NA    NA
+16:           NA          NA    NA
+17:           NA          NA    NA
+18:           NA          NA    NA
+19:           NA          NA    NA
+20:           NA          NA    NA
+21: 1.575091e-16 0.637497809    50
+22: 1.575091e-16 0.637497809    50
+23:           NA          NA    NA
+24:           NA          NA    NA
+25:           NA          NA    NA
+26:           NA          NA    NA
+27:           NA          NA    NA
+28:           NA          NA    NA
+29: 3.367201e-15 0.889721697  1280
+30: 2.998433e-15 0.846738400  1280
+31:           NA          NA    NA
+32:           NA          NA    NA
+33: 1.286627e-02 0.215524323 10815
+34: 1.261596e-02 0.289100786 10815
+35: 1.642454e+00 0.013531654  2325
+36: 9.613628e-01 0.179315255  2325
+37: 1.536854e-15 0.911663009  1330
+38: 1.432970e-15 0.868145187  1330
+39:           NA          NA    NA
+40:           NA          NA    NA
+41: 3.138421e-01 0.146302795  2024
+42: 2.282233e-01 0.460341506  2024
+43: 2.603876e+00 0.145032186    73
+44: 3.539579e-01 0.001544767    73
+       std_error     p_value  nobs
+                                                                                                                                                                                             status
+                                                                                                                                                                                             <char>
+ 1: not_estimated: in feols(formula, data = data, weights = weights, cl...: \nThe only variable, 'post_delta_10pp', is collinear with the fixed effects. Without doubt, your model is misspecified.
+ 2: not_estimated: in feols(formula, data = data, weights = weights, cl...: \nThe only variable, 'post_delta_10pp', is collinear with the fixed effects. Without doubt, your model is misspecified.
+ 3:                                                                                                                                       not_estimated: argument "env" is missing, with no default
+ 4:                                                                                                                                       not_estimated: argument "env" is missing, with no default
+ 5:                                                                                                                                                                                       estimated
+ 6:                                                                                                                                                                                       estimated
+ 7:                                                                                                                                                                                       estimated
+ 8:                                                                                                                                                                                       estimated
+ 9: not_estimated: in feols(formula, data = data, weights = weights, cl...: \nThe only variable, 'post_delta_10pp', is collinear with the fixed effects. Without doubt, your model is misspecified.
+10: not_estimated: in feols(formula, data = data, weights = weights, cl...: \nThe only variable, 'post_delta_10pp', is collinear with the fixed effects. Without doubt, your model is misspecified.
+11:                                                                                                                                       not_estimated: argument "env" is missing, with no default
+12:                                                                                                                                       not_estimated: argument "env" is missing, with no default
+13:                                                                                                                                                                                       estimated
+14:                                                                                                                                                                                       estimated
+15:                                                                                                                                       not_estimated: argument "env" is missing, with no default
+16:                                                                                                                                       not_estimated: argument "env" is missing, with no default
+17: not_estimated: in feols(formula, data = data, weights = weights, cl...: \nThe only variable, 'post_delta_10pp', is collinear with the fixed effects. Without doubt, your model is misspecified.
+18: not_estimated: in feols(formula, data = data, weights = weights, cl...: \nThe only variable, 'post_delta_10pp', is collinear with the fixed effects. Without doubt, your model is misspecified.
+19:                                                                                                                                       not_estimated: argument "env" is missing, with no default
+20:                                                                                                                                       not_estimated: argument "env" is missing, with no default
+21:                                                                                                                                                                                       estimated
+22:                                                                                                                                                                                       estimated
+23:                                                                                                                                       not_estimated: argument "env" is missing, with no default
+24:                                                                                                                                       not_estimated: argument "env" is missing, with no default
+25: not_estimated: in feols(formula, data = data, weights = weights, cl...: \nThe only variable, 'post_delta_10pp', is collinear with the fixed effects. Without doubt, your model is misspecified.
+26: not_estimated: in feols(formula, data = data, weights = weights, cl...: \nThe only variable, 'post_delta_10pp', is collinear with the fixed effects. Without doubt, your model is misspecified.
+27:                                                                                                                                       not_estimated: argument "env" is missing, with no default
+28:                                                                                                                                       not_estimated: argument "env" is missing, with no default
+29:                                                                                                                                                                                       estimated
+30:                                                                                                                                                                                       estimated
+31:                                                                                                                                       not_estimated: argument "env" is missing, with no default
+32:                                                                                                                                       not_estimated: argument "env" is missing, with no default
+33:                                                                                                                                                                                       estimated
+34:                                                                                                                                                                                       estimated
+35:                                                                                                                                                                                       estimated
+36:                                                                                                                                                                                       estimated
+37:                                                                                                                                                                                       estimated
+38:                                                                                                                                                                                       estimated
+39:                                                                                                                                       not_estimated: argument "env" is missing, with no default
+40:                                                                                                                                       not_estimated: argument "env" is missing, with no default
+41:                                                                                                                                                                                       estimated
+42:                                                                                                                                                                                       estimated
+43:                                                                                                                                                                                       estimated
+44:                                                                                                                                                                                       estimated
+                                                                                                                                                                                             status
+   cattle_type           outcome              design     event_name window_months  weighting pre_terms chi_square degrees_freedom pretrend_p_value
+        <char>            <char>              <char>         <char>         <int>     <char>     <int>      <num>           <int>            <num>
+1:      feeder        head_share stacked_two_reforms pm19_plus_pm20            12 unweighted        11   13.17562              11       0.28200233
+2:      feeder endorsement_share stacked_two_reforms pm19_plus_pm20            12 unweighted        11   12.88836              11       0.30068478
+3:      feeder      insured_head stacked_two_reforms pm19_plus_pm20            12 unweighted        10   16.34980              10       0.09004733
+4:      feeder      endorsements stacked_two_reforms pm19_plus_pm20            12 unweighted        10   11.82959              10       0.29662324
+5:         fed        head_share stacked_two_reforms pm19_plus_pm20            12 unweighted        NA         NA              NA               NA
+6:         fed endorsement_share stacked_two_reforms pm19_plus_pm20            12 unweighted        NA         NA              NA               NA
+7:         fed      insured_head stacked_two_reforms pm19_plus_pm20            12 unweighted        NA         NA              NA               NA
+8:         fed      endorsements stacked_two_reforms pm19_plus_pm20            12 unweighted        NA         NA              NA               NA
+                                                                                                                                                                                                                                                                        status
+                                                                                                                                                                                                                                                                        <char>
+1:                                                                                                                                                                                                                                                                   estimated
+2:                                                                                                                                                                                                                                                                   estimated
+3:                                                                                                                                                                                                                                                                   estimated
+4:                                                                                                                                                                                                                                                                   estimated
+5: not_estimated: in feols(event_formula, data = x, cluster = ~fips): \nEvaluation of the right-hand-side of the formula raises an error: \n  in i(factor_var = event_month, var = delta_rate_10pp...: \nIn argument `ref`, the value doesn't match any value of `factor_var`.
+6: not_estimated: in feols(event_formula, data = x, cluster = ~fips): \nEvaluation of the right-hand-side of the formula raises an error: \n  in i(factor_var = event_month, var = delta_rate_10pp...: \nIn argument `ref`, the value doesn't match any value of `factor_var`.
+7:                                                                                                                                                                                                                   not_estimated: argument "env" is missing, with no default
+8:                                                                                                                                                                                                                   not_estimated: argument "env" is missing, with no default
+Saved identification-grid results.
+
+===== R/07_build_full_county_month_panel.R =====
+Building full county-month risk-set panels...
+Wrote full county-month and county-month-tier risk-set panels.
+
+===== R/08_full_county_month_models.R =====
+Running full county-month risk-set diagnostics...
+|--------------------------------------------------|
+|==================================================|
+G3;NOTE: 0/120 fixed-effect singletons were removed (120 observations).
+gG3;NOTE: 1,829/0 fixed-effects (21,948 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 1,833/748 fixed-effects (23,057 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 1,829/0 fixed-effects (21,948 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 1,829/0 fixed-effects (21,948 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 1,833/748 fixed-effects (23,057 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 1,829/0 fixed-effects (21,948 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 0/144 fixed-effect singletons were removed (144 observations).
+gG3;NOTE: 672/10 fixed-effects (8,394 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 676/548 fixed-effects (8,548 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 672/10 fixed-effects (8,394 observations) removed because of only 0 outcomes or singletons.
+gG3;The variable 'event_time::5:event_delta_head_10pp' has been removed because of collinearity (see
+$collin.var).
+gG3;NOTE: 672/10 fixed-effects (8,394 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 676/548 fixed-effects (8,548 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 672/10 fixed-effects (8,394 observations) removed because of only 0 outcomes or singletons.
+gG3;The variable 'event_time::5:event_delta_endorsement_10pp' has been removed because of collinearity
+(see $collin.var).
+gG3;NOTE: 0/240 fixed-effect singletons were removed (240 observations).
+gG3;NOTE: 1,680/0 fixed-effects (40,320 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 1,684/1,440 fixed-effects (43,423 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 1,680/0 fixed-effects (40,320 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 1,680/0 fixed-effects (40,320 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 1,684/1,440 fixed-effects (43,423 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 1,680/0 fixed-effects (40,320 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 0/288 fixed-effect singletons were removed (288 observations).
+gG3;NOTE: 635/19 fixed-effects (16,016 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 639/1,077 fixed-effects (16,700 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 635/19 fixed-effects (16,016 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 635/19 fixed-effects (16,016 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 639/1,077 fixed-effects (16,700 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 635/19 fixed-effects (16,016 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 703/0 fixed-effects (33,744 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 703/0 fixed-effects (33,744 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 272/16 fixed-effects (14,608 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 272/16 fixed-effects (14,608 observations) removed because of only 0 outcomes or singletons.
+gSaved full county-month risk-set diagnostics.
+
+===== R/09_active_tier_stacked_design.R =====
+Running active county-month-tier stacked statutory design...
+G3;NOTE: 0/330/0 fixed-effect singletons were removed (330 observations).
+gG3;NOTE: 0/330/0 fixed-effect singletons were removed (330 observations).
+gG3;The variables 'event_time::0:delta_rate_10pp', 'event_time::1:delta_rate_10pp',
+'event_time::2:delta_rate_10pp', 'event_time::3:delta_rate_10pp', 'event_time::4:delta_rate_10pp',
+'event_time::5:delta_rate_10pp' and 5 others have been removed because of collinearity (see
+$collin.var).
+gG3;NOTE: 0/330/0 fixed-effect singletons were removed (330 observations).
+gG3;NOTE: 0/330/0 fixed-effect singletons were removed (330 observations).
+gG3;The variables 'event_time::0:delta_rate_10pp', 'event_time::1:delta_rate_10pp',
+'event_time::2:delta_rate_10pp', 'event_time::3:delta_rate_10pp', 'event_time::4:delta_rate_10pp',
+'event_time::5:delta_rate_10pp' and 5 others have been removed because of collinearity (see
+$collin.var).
+gG3;NOTE: 0/330/0 fixed-effect singletons were removed (330 observations).
+gG3;NOTE: 0/330/0 fixed-effect singletons were removed (330 observations).
+gG3;The variables 'event_time::0:delta_rate_10pp', 'event_time::1:delta_rate_10pp',
+'event_time::2:delta_rate_10pp', 'event_time::3:delta_rate_10pp', 'event_time::4:delta_rate_10pp',
+'event_time::5:delta_rate_10pp' and 5 others have been removed because of collinearity (see
+$collin.var).
+gG3;NOTE: 0/330/0 fixed-effect singletons were removed (330 observations).
+gG3;NOTE: 0/330/0 fixed-effect singletons were removed (330 observations).
+gG3;The variables 'event_time::0:delta_rate_10pp', 'event_time::1:delta_rate_10pp',
+'event_time::2:delta_rate_10pp', 'event_time::3:delta_rate_10pp', 'event_time::4:delta_rate_10pp',
+'event_time::5:delta_rate_10pp' and 5 others have been removed because of collinearity (see
+$collin.var).
+gG3;NOTE: 1,129/1,857/47 fixed-effects (8,820 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 1,129/1,857/47 fixed-effects (8,820 observations) removed because of only 0 outcomes or singletons.
+gG3;The variables 'event_time::-6:delta_rate_10pp', 'event_time::0:delta_rate_10pp',
+'event_time::1:delta_rate_10pp', 'event_time::2:delta_rate_10pp', 'event_time::3:delta_rate_10pp',
+'event_time::4:delta_rate_10pp' and 6 others have been removed because of collinearity (see
+$collin.var).
+gG3;NOTE: 1,129/1,857/47 fixed-effects (8,820 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 1,129/1,857/47 fixed-effects (8,820 observations) removed because of only 0 outcomes or singletons.
+gG3;The variables 'event_time::-6:delta_rate_10pp', 'event_time::0:delta_rate_10pp',
+'event_time::1:delta_rate_10pp', 'event_time::2:delta_rate_10pp', 'event_time::3:delta_rate_10pp',
+'event_time::4:delta_rate_10pp' and 6 others have been removed because of collinearity (see
+$collin.var).
+gG3;NOTE: 0/140/20 fixed-effect singletons were removed (155 observations).
+gG3;NOTE: 0/140/20 fixed-effect singletons were removed (155 observations).
+gG3;NOTE: 0/140/20 fixed-effect singletons were removed (155 observations).
+gG3;NOTE: 0/140/20 fixed-effect singletons were removed (155 observations).
+gG3;NOTE: 179/419/73 fixed-effects (1,304 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 179/419/73 fixed-effects (1,304 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 0/600/0 fixed-effect singletons were removed (600 observations).
+gG3;NOTE: 0/600/0 fixed-effect singletons were removed (600 observations).
+gG3;The variables 'event_time::6:delta_rate_10pp', 'event_time::7:delta_rate_10pp',
+'event_time::8:delta_rate_10pp', 'event_time::9:delta_rate_10pp', 'event_time::10:delta_rate_10pp',
+'event_time::12:delta_rate_10pp' and 5 others have been removed because of collinearity (see
+$collin.var).
+gG3;NOTE: 0/600/0 fixed-effect singletons were removed (600 observations).
+gG3;NOTE: 0/600/0 fixed-effect singletons were removed (600 observations).
+gG3;The variables 'event_time::6:delta_rate_10pp', 'event_time::7:delta_rate_10pp',
+'event_time::8:delta_rate_10pp', 'event_time::9:delta_rate_10pp', 'event_time::10:delta_rate_10pp',
+'event_time::12:delta_rate_10pp' and 5 others have been removed because of collinearity (see
+$collin.var).
+gG3;NOTE: 0/600/0 fixed-effect singletons were removed (600 observations).
+gG3;NOTE: 0/600/0 fixed-effect singletons were removed (600 observations).
+gG3;The variables 'event_time::6:delta_rate_10pp', 'event_time::8:delta_rate_10pp',
+'event_time::9:delta_rate_10pp', 'event_time::10:delta_rate_10pp', 'event_time::12:delta_rate_10pp',
+'event_time::14:delta_rate_10pp' and 3 others have been removed because of collinearity (see
+$collin.var).
+gG3;NOTE: 0/600/0 fixed-effect singletons were removed (600 observations).
+gG3;NOTE: 0/600/0 fixed-effect singletons were removed (600 observations).
+gG3;The variables 'event_time::6:delta_rate_10pp', 'event_time::7:delta_rate_10pp',
+'event_time::8:delta_rate_10pp', 'event_time::9:delta_rate_10pp', 'event_time::10:delta_rate_10pp',
+'event_time::12:delta_rate_10pp' and 5 others have been removed because of collinearity (see
+$collin.var).
+gG3;NOTE: 1,383/2,471/48 fixed-effects (11,516 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 1,383/2,471/48 fixed-effects (11,516 observations) removed because of only 0 outcomes or singletons.
+gG3;The variables 'event_time::-6:delta_rate_10pp', 'event_time::6:delta_rate_10pp',
+'event_time::7:delta_rate_10pp', 'event_time::9:delta_rate_10pp', 'event_time::12:delta_rate_10pp',
+'event_time::15:delta_rate_10pp' and 2 others have been removed because of collinearity (see
+$collin.var).
+gG3;NOTE: 1,383/2,471/48 fixed-effects (11,516 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 1,383/2,471/48 fixed-effects (11,516 observations) removed because of only 0 outcomes or singletons.
+gG3;The variables 'event_time::-6:delta_rate_10pp', 'event_time::6:delta_rate_10pp',
+'event_time::7:delta_rate_10pp', 'event_time::8:delta_rate_10pp', 'event_time::9:delta_rate_10pp',
+'event_time::10:delta_rate_10pp' and 6 others have been removed because of collinearity (see
+$collin.var).
+gG3;NOTE: 0/290/15 fixed-effect singletons were removed (305 observations).
+gG3;NOTE: 0/290/15 fixed-effect singletons were removed (305 observations).
+gG3;NOTE: 0/290/15 fixed-effect singletons were removed (305 observations).
+gG3;NOTE: 0/290/15 fixed-effect singletons were removed (305 observations).
+gG3;NOTE: 245/666/78 fixed-effects (1,814 observations) removed because of only 0 outcomes or singletons.
+gG3;NOTE: 245/666/78 fixed-effects (1,814 observations) removed because of only 0 outcomes or singletons.
+gSaved active tier stacked design outputs.
+Warning message:
+The VCOV matrix is not positive definite and was 'fixed' (see ?vcov). 
+
+Pilot completed: 2026-08-17 11:27:53 

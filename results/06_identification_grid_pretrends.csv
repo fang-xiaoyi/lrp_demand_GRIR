@@ -1,0 +1,15 @@
+cattle_type,outcome,design,event_name,window_months,weighting,pre_terms,chi_square,degrees_freedom,pretrend_p_value,status
+feeder,head_share,stacked_two_reforms,pm19_plus_pm20,12,unweighted,11,13.1756174387487,11,0.28200233094524,estimated
+feeder,endorsement_share,stacked_two_reforms,pm19_plus_pm20,12,unweighted,11,12.8883598109305,11,0.300684776687639,estimated
+feeder,insured_head,stacked_two_reforms,pm19_plus_pm20,12,unweighted,10,16.3497978986682,10,0.0900473342578394,estimated
+feeder,endorsements,stacked_two_reforms,pm19_plus_pm20,12,unweighted,10,11.8295914476687,10,0.29662323908844,estimated
+fed,head_share,stacked_two_reforms,pm19_plus_pm20,12,unweighted,,,,,"not_estimated: in feols(event_formula, data = x, cluster = ~fips): 
+Evaluation of the right-hand-side of the formula raises an error: 
+  in i(factor_var = event_month, var = delta_rate_10pp...: 
+In argument `ref`, the value doesn't match any value of `factor_var`."
+fed,endorsement_share,stacked_two_reforms,pm19_plus_pm20,12,unweighted,,,,,"not_estimated: in feols(event_formula, data = x, cluster = ~fips): 
+Evaluation of the right-hand-side of the formula raises an error: 
+  in i(factor_var = event_month, var = delta_rate_10pp...: 
+In argument `ref`, the value doesn't match any value of `factor_var`."
+fed,insured_head,stacked_two_reforms,pm19_plus_pm20,12,unweighted,,,,,"not_estimated: argument ""env"" is missing, with no default"
+fed,endorsements,stacked_two_reforms,pm19_plus_pm20,12,unweighted,,,,,"not_estimated: argument ""env"" is missing, with no default"

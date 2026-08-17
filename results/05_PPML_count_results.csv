@@ -1,0 +1,9 @@
+cattle_type,outcome,setup,counties,term,coefficient,std_error,p_value,nobs,status
+feeder,insured_head,advisor_base,179,subsidy_rate_10pp,2.5865368161306,1.46799271352914,0.0780769336843662,1173,estimated
+feeder,insured_head,tier_seasonality,179,subsidy_rate_10pp,2.42379694652592,1.02914461241194,0.0185148904856339,1149,estimated
+feeder,endorsements,advisor_base,179,subsidy_rate_10pp,0.611302117677852,0.528330320342022,0.247253850208823,1173,estimated
+feeder,endorsements,tier_seasonality,179,subsidy_rate_10pp,0.925831612632976,0.574624975500207,0.107137710641924,1149,estimated
+fed,insured_head,advisor_base,15,subsidy_rate_10pp,-36.9162657385053,7.03309098327161e-15,0,24,estimated
+fed,insured_head,tier_seasonality,15,subsidy_rate_10pp,-37.2847128282411,5.21679453352977,8.86599346471471e-13,12,estimated
+fed,endorsements,advisor_base,15,subsidy_rate_10pp,-36.4525776264322,7.55224556691725e-15,0,24,estimated
+fed,endorsements,tier_seasonality,15,subsidy_rate_10pp,-37.2836027780537,1.67948963239874,3.48338899547841e-109,12,estimated

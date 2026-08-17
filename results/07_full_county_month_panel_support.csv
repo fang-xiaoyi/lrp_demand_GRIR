@@ -1,0 +1,3 @@
+cattle_type,observations,counties,months,active_county_months,active_share,total_head,total_endorsements,risk_set
+fed,88560,369,240,4866,0.0549457994579946,2991568,14571,"ever-valid-LRP county by cattle type, expanded monthly"
+feeder,261840,1091,240,27995,0.106916437519096,13858223,106350,"ever-valid-LRP county by cattle type, expanded monthly"
