@@ -1,41 +1,102 @@
-# GRIR statutory coverage-tier data project
+# Maturity-Matched LRP-Option Analysis
 
-## Confirmed data construction
+This folder contains the updated maturity- and moneyness-matched LRP-option analysis used in the revised manuscript.
 
-- Stable coverage bins over time: 70--79.99, 80--84.99, 85--89.99, 90--94.99, and 95--100 percent.
-- Official statutory schedule rate is the treatment.
-- Endorsement-level `subsidy / total premium` validates the schedule but does not define treatment.
-- Active county-month-tier panel includes zero-demand cells for the five fixed bins in every positive-LRP county-month.
-- Full county-month risk-set panel expands all ever-valid-LRP counties by month and keeps inactive county-months as zero-demand observations.
-- Feeder and fed cattle are estimated separately; feeder cattle is the main sample.
+## To Run
 
-The active-purchase analysis studies insured-head and endorsement shares across
-fixed tiers within active county-months. The full risk-set analysis studies
-activity and scale with inactive county-months retained. None of these scripts
-generate the paper; they write diagnostic outputs for reviewing the revised
-identification strategy.
+Open the R project first:
 
-## Important manual check
+```text
+maturity_matched_reanalysis/maturity_matched_reanalysis.Rproj
+```
 
-The project reads the policy schedule supplied in `data_manual/lrp_policy_subsidy_schedule.csv`. The code verifies that commodity codes 801 and 802 have the same rate for every period and fixed coverage bin before collapsing them to the cattle-type panel schedule.
+Then run the manuscript scripts in the `R/` folder in the order listed below. The scripts are written to be run from this R project directory. If a script is run from another working directory, it may stop with a message asking the user to open the `maturity_matched_reanalysis` R project.
 
-## How to run
+The run order for the current manuscript is:
 
-1. Open `GRIR_statutory_tier_pilot.Rproj` in RStudio.
-2. Review `data_manual/lrp_policy_subsidy_schedule.csv`.
-3. Run `RUN_PILOT.R`.
+```text
+R/00_rebuild_maturity_matching_full_history.R
+R/01_calculate_matched_iv.R
+R/02_build_analysis_panels.R
+R/03_descriptive_outputs.R
+R/04_build_iv_curves_fpca.R
+R/05_run_var_irf.R
+R/06_run_lrp_to_pc_local_projections.R
+R/08_run_shock_specification_robustness.R
+R/11_run_direct_iv_metric_lps.R
+R/14_cell_descriptive_outputs.R
+R/18_cell_mechanical_premium_channel.R
+R/19_cell_bin_heterogeneity_figures_v2.R
+R/20_run_direct_cell_main_models.R
+R/21_cell_policy_event_placebo_tests.R
+R/22_make_submission_tables_figures.R
+R/23_make_appendix_tables_figures.R
+R/25_close_contract_subanalysis.R
+R/26_mechanism_closeness_premium_channel.R
+```
+
+Some later scripts use outputs created by earlier scripts, so the numerical order matters.
+
+Scripts that were exploratory or superseded during revision are stored in:
+
+```text
+R/archive_not_used_current_draft/
+```
+
+Those archived scripts are kept for record-keeping but are not needed to reproduce the current manuscript tables and figures.
+
+## Source Files
+
+The source-file map is stored in:
+
+```text
+data_raw/source_paths.csv
+```
+
+The paths in that file are relative to this project folder. The current source inputs are:
+
+| Key | Relative path | Description |
+|---|---|---|
+| `matched_endorsements` | `../full data/maturity matching/lrp_option_maturity_matched_endorsements.csv` | Endorsement-level LRP-option maturity-matched data |
+| `monthly_maturity_panel` | `../full data/maturity matching/monthly_maturity_bucket_panel.csv` | Existing monthly maturity-bucket panel from the maturity-matching scripts |
+| `futures_curve_long` | `../full data/Futures_curve/futures_curve_long.csv` | CME futures curve data in long format |
+| `options_with_futures_curve` | `../full data/Futures_curve/options_with_futures_curve.csv` | CME option trades matched to futures curve prices |
+| `treasury_3m` | `../t_bill_3m_2001on.csv` | Three-month Treasury rate data used in implied-volatility construction |
+| `vix` | `../VIXCLS.csv` | Daily VIX data used for market volatility controls in market-level robustness checks |
+| `jcm_helpers` | `../JCM_revised_R_pipeline/jcm_helpers.R` | Helper functions, including Black-76 implied-volatility routines |
+
+The mechanical premium-channel scripts also use:
+
+```text
+../lrp_policy_subsidy_schedule.csv
+```
+
+This file records the LRP subsidy schedule used to construct policy-induced producer-premium cuts. In the current version, the July 2019 to June 2020 reform is coded as a flat 20 percent subsidy rate across coverage levels, and the July 2020 expansion is coded as tiered rates by coverage level.
+
+The full-history matching rebuild also uses the annual LRP endorsement files in:
+
+```text
+../full data/lrp_csv/
+```
+
+## Main Outputs
+
+Processed analysis data are written to:
+
+```text
+data_processed/
+```
+
+Regression tables, summaries, and generated LaTeX tables are written to:
+
+```text
+outputs/
+```
+
+Generated figures are written to:
+
+```text
+figures/
+```
 
 
-Run scripts individually if preferred:
-
-1. `R/01_validate_statutory_rates.R`
-2. `R/02_build_county_month_tier_panel.R`
-3. `R/03_run_active_purchase_share_models.R`
-4. `R/04_setups.R`
-5. `R/05_PPML_count_models.R`
-6. `R/06_identification_grid.R`
-7. `R/07_build_full_county_month_panel.R`
-8. `R/08_full_county_month_models.R`
-9. `R/09_active_tier_stacked_design.R`
-
-Results are written to `results/`, figures to `figures/`, processed data to `data_processed/`, and the run log to `logs/RUN_PILOT.log`.
