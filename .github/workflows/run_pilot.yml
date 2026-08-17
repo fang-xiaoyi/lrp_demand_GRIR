@@ -1,1 +1,49 @@
+name: Run GRIR statutory-tier pilot
 
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-pilot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.2.2'
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libxml2-dev libssl-dev libcurl4-openssl-dev libgit2-dev
+
+      - name: Install R packages
+        run: |
+          Rscript -e 'options(repos=structure(c(CRAN="https://cloud.r-project.org"))); pkgs <- c("data.table","lubridate","fixest","ggplot2","modelsummary","here","scales","dplyr","tidyr"); install.packages(pkgs[!(pkgs %in% installed.packages()[,"Package"])])'
+
+      - name: Run RUN_PILOT.R
+        working-directory: ${{ github.workspace }}
+        run: |
+          Rscript -e 'source("config.R")'
+          Rscript RUN_PILOT.R
+
+      - name: List results directory
+        run: |
+          echo "=== results ==="
+          ls -la results || true
+          echo "=== data_processed ==="
+          ls -la data_processed || true
+
+      - name: Upload results artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: grir-pilot-results
+          path: |
+            results
+            data_processed/county_month_fixed_tier_panel_2005_2024.csv
